@@ -1,6 +1,6 @@
 /**
  * @package   	JCE
- * @copyright 	Copyright (c) 2009-2022 Ryan Demmer. All rights reserved.
+ * @copyright 	Copyright (c) 2009-2023 Ryan Demmer. All rights reserved.
  * @copyright   (C) 2010 Open Source Matters, Inc. <https://www.joomla.org>
  * @license   	GNU/GPL 2 or later - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * JCE is free software. This version may have been modified pursuant
@@ -16,20 +16,12 @@
 (function ($) {
 
     $(document).ready(function () {
-        $('img.caption').each(function () {
-            // skip existing captions
-            if ($(this).parent('figure').length) {
-                return;
-            }
-
+        $('img.caption').filter(function () {
+            return $(this).parents('figure').length === 0 && $(this).attr('title').trim() !== "";
+        }).each(function () {
             var $el = $(this),
                 caption = $el.attr('title').trim(),
                 align = $el.attr("align") || $el.css("float") || this.style.styleFloat || "none",
-
-                // no caption
-                if (!caption) {
-                    return;
-                }
 
                 $p = $('<figcaption/>', {
                     "text": caption,
