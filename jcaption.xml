@@ -2,12 +2,12 @@
 <extension version="3.1" type="plugin" group="system" method="upgrade">
 	<name>plg_system_jcaption</name>
 	<author>Widget Factory</author>
-	<creationDate>Februray 2022</creationDate>
-	<copyright>Copyright (C) 2022 Ryan Demmer. All rights reserved.</copyright>
+	<creationDate>November 2023</creationDate>
+	<copyright>Copyright (C) 2022 - 2023 Ryan Demmer. All rights reserved.</copyright>
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
 	<authorEmail>info@joomlacontenteditor.net</authorEmail>
 	<authorUrl>www.joomlacontenteditor.net</authorUrl>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<description>JCaption Migration</description>
 	<files folder="plugins/system/jcaption">
 		<filename plugin="jcaption">jcaption.php</filename>
