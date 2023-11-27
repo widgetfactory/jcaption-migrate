@@ -17,9 +17,19 @@
 
     $(document).ready(function () {
         $('img.caption').each(function () {
+            // skip existing captions
+            if ($(this).parent('figure').length) {
+                return;
+            }
+
             var $el = $(this),
-                caption = $el.attr('title'),
+                caption = $el.attr('title').trim(),
                 align = $el.attr("align") || $el.css("float") || this.style.styleFloat || "none",
+
+                // no caption
+                if (!caption) {
+                    return;
+                }
 
                 $p = $('<figcaption/>', {
                     "text": caption,
