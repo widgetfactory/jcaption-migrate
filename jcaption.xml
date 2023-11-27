@@ -7,7 +7,7 @@
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
 	<authorEmail>info@joomlacontenteditor.net</authorEmail>
 	<authorUrl>www.joomlacontenteditor.net</authorUrl>
-	<version>1.0.1</version>
+	<version>1.0.3</version>
 	<description>JCaption Migration</description>
 	<files folder="plugins/system/jcaption">
 		<filename plugin="jcaption">jcaption.php</filename>
